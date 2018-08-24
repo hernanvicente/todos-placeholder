@@ -1,0 +1,9 @@
+<h4>todos.index</h4>
+<ul>
+  {{#each model as |todo|}}
+    {{#unless todo.isDeleted}}
+      <li>{{todo.title}} - <a {{action 'deleteMe' todo}}>delete me</a></li>
+    {{/unless}}
+  {{/each}}
+</ul>
+
